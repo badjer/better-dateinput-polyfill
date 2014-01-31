@@ -50,8 +50,8 @@
                         result = "";
                     }
 
-                    month = value.getMonth();
-                    date = value.getDate();
+                    month = value.getUTCMonth();
+                    date = value.getUTCDate();
                     year = value.getFullYear();
 
                     if (typeof result !== "string") {
