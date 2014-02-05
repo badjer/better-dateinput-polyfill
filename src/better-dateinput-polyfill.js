@@ -9,8 +9,8 @@
 
     DOM.extend("input[type=date]", {
         constructor: function() {
-            var calendar = DOM.create("div.${c}>a[unselectable=on]*2+p.${c}-header+table.${c}-days>thead>tr>th[unselectable=on]*7+tbody>tr*6>td*7", {c: COMPONENT_CLASS + "-calendar"}),
-                dateinput = DOM.create("input[type=hidden name=${name}]", {name: this.get("name")});
+            var calendar = DOM.create("div.${c}>a[unselectable=on]*2+p.${c}-header+table.${c}-days>thead>tr>th[unselectable=on]*7+tbody>tr*6>td*7", {c: COMPONENT_CLASS + "-calendar"});//,
+            var dateinput = DOM.find('input[name="hidden_' + this.get('name') + '"]');
 
             this
                 // remove legacy dateinput if it exists
